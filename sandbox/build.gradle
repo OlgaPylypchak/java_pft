@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'application'
+mainClassName = "ru.stqa.pft.sandbox.MyFirstProgram"
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.springframework.org/release"
+    }
+    maven {
+        url "https://maven.restlet.com"
+    }
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.0.0'
+}
+
+test {
+    useTestNG()
+}
